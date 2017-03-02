@@ -24,7 +24,7 @@ public class ComputeController {
     public String add(@RequestParam Integer a, @RequestParam Integer b) {
         ServiceInstance instance = client.getLocalServiceInstance();
         Integer r = a + b;
-        logger.info("/add, host:" + instance.getHost() + ", service_id:" + instance.getServiceId() + ", result:" + r );
+        logger.info("/add, host:" + instance.getHost() + ", service_id:" + instance.getServiceId() + ", result:" + r +"ServiceA-Property:" + this.getFrom());
         return "From Service-A, Result is " + r;
     }
     public void setFrom(String from) {
